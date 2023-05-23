@@ -8,8 +8,8 @@ RUN apk add --no-cache bash curl diffutils git git-lfs less vim
 
 RUN addgroup -g 10001 ${USER_NAME} && \
     adduser -u 10001 -G ${USER_NAME} -h ${HOME} -s /bin/sh -D ${USER_NAME} && \
-    chgrp -r 0 ${HOME} && \
-    chmod -r g=u ${HOME} /etc/passwd /etc/group
+    chgrp -R 0 ${HOME} && \
+    chmod -R g=u ${HOME} /etc/passwd /etc/group
 
 COPY entrypoint.sh /usr/local/bin
 
