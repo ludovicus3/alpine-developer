@@ -1,0 +1,3 @@
+[submodule "postgresql-evr"]
+	path = postgresql-evr
+	url = https://github.com/Katello/postgresql-evr.git
