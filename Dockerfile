@@ -4,5 +4,5 @@ FROM postgres:${POSTGRES_VERSION}-alpine${ALPINE_VERSION}
 
 RUN apk add --no-cache make
 
-RUN make -C postgres-evr
+RUN make -C postgresql-evr
 
