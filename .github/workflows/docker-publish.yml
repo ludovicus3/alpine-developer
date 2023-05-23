@@ -7,9 +7,9 @@ name: Docker
 
 on:
   push:
-    branches: [ "base" ]
+    branches: [ "postgres" ]
   pull_request:
-    branches: [ "base" ]
+    branches: [ "postgres" ]
 
 env:
   # Use docker.io for Docker Hub if empty
