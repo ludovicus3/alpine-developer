@@ -12,8 +12,9 @@ RUN addgroup -g 10001 ${USER_NAME} && \
     chmod -R g=u ${HOME} /etc/passwd /etc/group
 
 COPY entrypoint.sh /usr/local/bin
+RUN chmod a+x /usr/local/bin/entrypoint.sh
 
 USER 10001
 WORKDIR /projects
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+ENTRYPOINT ["entrypoint.sh"]
 CMD ["tail", "-f", "/dev/null"]
