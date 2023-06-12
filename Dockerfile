@@ -14,6 +14,7 @@ RUN addgroup -g 10001 ${USER_NAME} && \
 COPY entrypoint.sh /usr/local/bin
 
 USER 10001
+ENV PATH=$PATH:/usr/local/bin
 WORKDIR /projects
 ENTRYPOINT ["entrypoint.sh"]
 CMD ["tail", "-f", "/dev/null"]
